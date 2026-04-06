@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment & secrets
+.env
+.env.local
+.env.production
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Capacitor native builds (large, regenerated)
+android/app/build/
+ios/App/Pods/
+
+# Vercel
+.vercel/
+
+# Logs
+*.log
+npm-debug.log*

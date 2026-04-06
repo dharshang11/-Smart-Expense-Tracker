@@ -1,0 +1,83 @@
+.particle-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  perspective: 600px;
+}
+
+.particle-bg__orb {
+  position: absolute;
+  border-radius: 50%;
+  animation: floatOrb linear infinite;
+  will-change: transform;
+  filter: blur(1px);
+}
+
+@keyframes floatOrb {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  25% {
+    transform: translate3d(30px, -40px, 20px) scale(1.2);
+  }
+  50% {
+    transform: translate3d(-20px, -80px, -10px) scale(0.8);
+  }
+  75% {
+    transform: translate3d(40px, -30px, 30px) scale(1.1);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+/* Large ambient gradient orbs */
+.particle-bg__gradient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: driftOrb ease-in-out infinite;
+}
+
+.particle-bg__gradient-orb--1 {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  right: -100px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.06), transparent 70%);
+  animation-duration: 20s;
+}
+
+.particle-bg__gradient-orb--2 {
+  width: 250px;
+  height: 250px;
+  bottom: 30%;
+  left: -80px;
+  background: radial-gradient(circle, rgba(129, 140, 248, 0.05), transparent 70%);
+  animation-duration: 25s;
+  animation-delay: -5s;
+}
+
+.particle-bg__gradient-orb--3 {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  right: 20%;
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.04), transparent 70%);
+  animation-duration: 30s;
+  animation-delay: -10s;
+}
+
+@keyframes driftOrb {
+  0%, 100% {
+    transform: translate3d(0, 0, -50px);
+  }
+  33% {
+    transform: translate3d(30px, -20px, 20px);
+  }
+  66% {
+    transform: translate3d(-20px, 15px, -30px);
+  }
+}

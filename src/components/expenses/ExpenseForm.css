@@ -1,0 +1,107 @@
+.expense-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.expense-form__amount-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-lg) 0;
+}
+
+.expense-form__currency {
+  font-size: var(--font-size-2xl);
+  font-weight: 300;
+  color: var(--text-muted);
+}
+
+.expense-form__amount-input {
+  font-size: var(--font-size-3xl) !important;
+  font-weight: 800 !important;
+  text-align: center;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid var(--bg-glass-border) !important;
+  border-radius: 0 !important;
+  padding: var(--space-sm) !important;
+  max-width: 200px;
+  letter-spacing: -0.02em;
+}
+
+.expense-form__amount-input:focus {
+  border-bottom-color: var(--accent-primary) !important;
+  box-shadow: none !important;
+}
+
+/* Remove number input spinners */
+.expense-form__amount-input::-webkit-outer-spin-button,
+.expense-form__amount-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.expense-form__amount-input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.expense-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+/* CATEGORY GRID */
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.category-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1.5px solid transparent;
+  border-radius: 100px;
+  font-family: var(--font-family);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.category-chip:hover {
+  background: var(--bg-card-hover);
+}
+
+.category-chip--active {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.category-chip__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.expense-form__error {
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Date input color scheme fix for dark mode */
+input[type="date"] {
+  color-scheme: dark;
+}

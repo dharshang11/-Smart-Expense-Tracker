@@ -1,0 +1,119 @@
+.budget-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.budget-page__header {
+  padding-top: var(--space-sm);
+  opacity: 0;
+}
+
+.budget-page__title {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.budget-page__subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* BUDGET INPUT CARD */
+.budget-input-card {
+  padding: var(--space-lg);
+}
+
+.budget-input-card__title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.budget-input-card__row {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: stretch;
+}
+
+.budget-input-card__input-wrap {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.budget-input-card__currency {
+  position: absolute;
+  left: 16px;
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.budget-input-card__input {
+  padding-left: 36px !important;
+  font-weight: 700 !important;
+  font-size: var(--font-size-lg) !important;
+}
+
+/* Remove spinners */
+.budget-input-card__input::-webkit-outer-spin-button,
+.budget-input-card__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.budget-input-card__input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* STAT CARDS */
+.budget-stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  opacity: 0;
+}
+
+.budget-stat-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+}
+
+.budget-stat-card__icon {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.budget-stat-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.budget-stat-card__label {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.budget-stat-card__value {
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
