@@ -1,16 +1,45 @@
-# React + Vite
+# Smart Expense Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive financial management application built with React, Vite, and Capacitor. This app helps users track expenses with advanced features like SMS detection and Firebase synchronization.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **PWA Support:** Installable on mobile and desktop for a native-like experience.
+- **SMS Detection:** Automatically detect expense messages to streamline tracking.
+- **Multi-Currency:** Support for various currencies with real-time conversion.
+- **Firebase Sync:** Securely sync your data across multiple devices.
+- **Offline First:** Built with Dexie.js for robust offline capabilities.
+- **Cross-Platform:** Deployable to Android and iOS via Capacitor.
+- **Data Visualization:** Insightful charts and reports using Recharts.
+- **Export Options:** Generate PDF reports of your expenses.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React 19, Vite, Lucide React
+- **Database:** Dexie (IndexedDB), Firebase
+- **Mobile:** Capacitor (Android/iOS)
+- **Charts:** Recharts
+- **PDF Generation:** jsPDF
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/dharshang11/-Smart-Expense-Tracker.git
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run in development mode:
+   ```bash
+   npm run dev
+   ```
+
+## 📱 Mobile Setup
+
+To run on Android or iOS:
+```bash
+npx cap sync
+npx cap open android # or ios
+```
